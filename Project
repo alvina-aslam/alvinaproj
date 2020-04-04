@@ -1,0 +1,171 @@
+<?php
+$c1=0;
+$c2=0;
+$c3=0;
+$c4=0;
+for ($i=0; $i <=5; $i++) { 
+$a=$i+1;
+echo "round, $a";
+$Choosefrom= array('rock', 'paper', 'scissors');
+$Choice1= rand(0,2);
+$Choice2= rand(0,2);
+$Choice3= rand(0,2);
+$Choice4= rand(0,2);
+$p1=$Choosefrom[$Choice1];
+$p2=$Choosefrom[$Choice2];
+$p3=$Choosefrom[$Choice3];
+$p4=$Choosefrom[$Choice4];
+echo "<table border=2>";
+echo "<tr>";
+echo "<td>$p1</td>";
+echo "<td>$p2</td>";
+echo "<td>$p3</td>";
+echo "<td>$p4</td>";
+echo "</tr>";
+echo "</table>";
+echo "<table border=2>";
+echo "<tr>";
+if ($p1=='rock' && $p2=='scissors') {
+$c1++;
+}
+if ($p1=='rock' && $p3=='scissors') {
+$c1++;
+}
+if ($p1=='rock' && $p4=='scissors') {
+$c1++;
+}
+if ($p1=='paper' && $p4=='rock') {
+$c1++;
+}
+
+if ($p1=='paper' && $p2=='rock') {
+$c1++;
+}
+if ($p1=='paper' && $p3=='rock') {
+$c1++;
+}
+
+if ($p1=='scissors' && $p4=='paper') {
+$c1++;
+}
+if ($p1=='scissors' && $p3=='paper') {
+$c1++;
+}
+if ($p1=='scissors' && $p2=='paper') {
+$c1++;
+}
+
+echo "<td>$c1</td>";
+
+if ($p2=='rock' && $p1=='scissors') {
+$c2++;
+}
+if ($p2=='rock' && $p3=='scissors') {
+$c2++;
+}
+if ($p2=='rock' && $p4=='scissors') {
+$c2++;
+}
+if ($p2=='paper' && $p4=='rock') {
+$c2++;
+}
+
+if ($p2=='paper' && $p1=='rock') {
+$c2++;
+}
+if ($p2=='paper' && $p3=='rock') {
+$c2++;
+}
+
+if ($p2=='scissors' && $p4=='paper') {
+$c2++;
+}
+if ($p2=='scissors' && $p3=='paper') {
+$c2++;
+}
+if ($p2=='scissors' && $p1=='paper') {
+$c2++;
+}
+echo "<td>$c2</td>";
+if ($p3=='rock' && $p2=='scissors') {
+$c3++;
+}
+if ($p3=='rock' && $p1=='scissors') {
+$c3++;
+}
+if ($p3=='rock' && $p4=='scissors') {
+$c3++;
+}
+if ($p3=='paper' && $p4=='rock') {
+$c3++;
+}
+
+if ($p3=='paper' && $p2=='rock') {
+$c3++;
+}
+if ($p3=='paper' && $p1=='rock') {
+$c3++;
+}
+
+if ($p3=='scissors' && $p4=='paper') {
+$c3++;
+}
+if ($p3=='scissors' && $p1=='paper') {
+$c3++;
+}
+if ($p3=='scissors' && $p2=='paper') {
+$c3++;
+}
+echo "<td>$c3</td>";
+if ($p4=='rock' && $p2=='scissors') {
+$c4++;
+}
+if ($p4=='rock' && $p3=='scissors') {
+$c4++;
+}
+if ($p4=='rock' && $p1=='scissors') {
+$c4++;
+}
+if ($p4=='paper' && $p1=='rock') {
+$c4++;
+}
+
+if ($p4=='paper' && $p2=='rock') {
+$c4++;
+}
+if ($p4=='paper' && $p3=='rock') {
+$c4++;
+}
+
+if ($p4=='scissors' && $p1=='paper') {
+$c4++;
+}
+if ($p4=='scissors' && $p3=='paper') {
+$c4++;
+}
+if ($p4=='scissors' && $p2=='paper') {
+$c4++;
+}
+echo "<td>$c4<td>";
+echo "</tr>";
+echo "</table>";
+echo "<br>";
+}
+if(max($c1,$c2,$c3,$c4)==$c1)
+{
+echo "<h1>Player 1 win</h1>";
+}
+
+if(max($c1,$c2,$c3,$c4)==$c2)
+{
+echo "<h1>Player 2 win</h1>";
+}
+if(max($c1,$c2,$c3,$c4)==$c3)
+{
+echo "<h1>Player 3 win</h1>";
+}
+if(max($c1,$c2,$c3,$c4)==$c4)
+{
+echo "<h1>Player 4 win</h1>";
+}
+?>
